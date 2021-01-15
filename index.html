@@ -67,12 +67,14 @@
         <div>
           <!-- <div class="card-header">Header</div> -->
           <label for="test">How many options are you choosing from?</label>
-          <input type="text" placeholder="Number of options" />
+          <input id="input-options" type="text" value="2" />
         </div>
         <div>
-          <button class="btn btn-lg btn-primary">MAKE RANDOM PICK</button>
+          <button class="btn btn-lg btn-primary" onclick="makeRandomPick()">
+            MAKE RANDOM PICK
+          </button>
         </div>
-        <div class="result">
+        <div id="result-section" hidden>
           <div>Your randomly selected choice is:</div>
           <div>Option number: <span id="random-pick">X</span></div>
         </div>
@@ -92,10 +94,12 @@
       </footer>
     </div>
 
+    <script src="leave-to-chance.js"></script>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
@@ -107,6 +111,6 @@
         );
     </script>
     <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script> -->
   </body>
 </html>
