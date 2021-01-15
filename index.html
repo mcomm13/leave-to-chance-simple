@@ -26,6 +26,12 @@
     <!-- Styles for the Bootstrap template -->
     <link href="bootstrap/cover.css" rel="stylesheet" />
 
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <!-- Custom styles for this page -->
     <link href="style.css" rel="stylesheet" />
 
@@ -52,31 +58,42 @@
       <header class="masthead mb-auto">
         <div class="inner">
           <h1>Leave To Chance</h1>
-          <!-- <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav> -->
         </div>
       </header>
 
       <main role="main" class="inner cover">
-        <h2 class="cover-heading">
-          Use this app to help you leave a decision up to chance
+        <h2 class="cover-heading mb-5">
+          Use this app to help you leave a decision up to chance. It's like
+          picking a number from a hat... except much easier.
         </h2>
-        <div>
-          <!-- <div class="card-header">Header</div> -->
-          <label for="test">How many options are you choosing from?</label>
-          <input id="input-options" type="text" value="2" />
-        </div>
-        <div>
-          <button class="btn btn-lg btn-primary" onclick="makeRandomPick()">
-            MAKE RANDOM PICK
-          </button>
-        </div>
-        <div id="result-section" hidden>
-          <div>Your randomly selected choice is:</div>
-          <div>Option number: <span id="random-pick">X</span></div>
+        <div class="main-content">
+          <div class="form-group">
+            <label for="input-options"
+              >How many options are you choosing from?</label
+            >
+            <input
+              id="input-options"
+              class="form-control"
+              type="text"
+              value="2"
+              maxlength="6"
+            />
+          </div>
+          <div>
+            <button class="btn btn-lg btn-primary" onclick="makeRandomPick()">
+              MAKE RANDOM PICK
+            </button>
+          </div>
+          <div
+            id="result-section"
+            class="animate__animated animate__pulse mt-4"
+            hidden
+          >
+            <div>Your randomly selected choice is:</div>
+            <div class="random-pick-text">
+              Option # <span id="random-pick">X</span>
+            </div>
+          </div>
         </div>
       </main>
 
@@ -95,22 +112,5 @@
     </div>
 
     <script src="leave-to-chance.js"></script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>'
-        );
-    </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script> -->
   </body>
 </html>
