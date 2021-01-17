@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://leave-to-chance.web.app/sitemap.xml
